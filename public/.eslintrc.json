@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "bloq"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": false,
+      "jsx": false
+    },
+    "ecmaVersion": 2017
+  },
+  "root": true
+}

@@ -1,0 +1,19 @@
+{
+  "app": {
+    "chain": "mainnet",
+    "node": {
+      "jsonRpcApiUrl": "http://localhost:8545",
+      "websocketApiUrl": "http://localhost:8546"
+    },
+    "defaultDerivationPath": "m/44'/60'/0'/0",
+    "indexerApiUrl": "https://indexer.metronome.io",
+    "tracerApiUrl": "https://tracer.metronome.io",
+    "trackingId": "UA-116275666-6",
+    "rescanBalance": 15000,
+    "rescanUnconfirmedTxs": 600000
+  },
+  "coincap": {
+    "ethPriceEmitRate": 5
+  },
+  "settingsVersion": 15
+}

@@ -1,0 +1,255 @@
+.content
+  width: 100%
+  height: 470px
+  @include flex-container(space-between, flex-start, nowrap)
+
+.panel
+  width: 184px
+  height: 100%
+  background-color: $bg
+  &>img
+    width: 136px
+    display: block
+    margin: 16px auto 35px auto
+
+.menu
+  margin-bottom: 80px
+  &__link
+    width: 100%
+    padding: 10px 16px
+    display: flex
+    align-items: flex-start
+    align-items: center
+    &>p
+      margin-left: 12px
+      font-size: 14px
+      color: $white
+    &:hover
+      background-color: rgba($white, .15)
+      transition: .2s
+
+.activeLink
+  background-color: rgba($white, .15)
+
+.info
+  font-size: 12px
+  letter-spacing: -0.5px
+  margin-bottom: 38px
+  &>div
+    padding: 0 16px
+    margin-bottom: 12px
+    @include flex-container(space-between, center, nowrap)
+    &>p
+      color: rgba($white, .6)
+    &>span
+      color: $white
+
+.infoAlert
+  color: $red !important
+
+.version
+  text-align: center
+  &>p
+    font-size: 12px
+    color: rgba($white, .6)
+    &>span
+      font-size: 12px
+      color: rgba($white, .6)
+
+.balance
+  width: 716px
+  padding: 12px 24px
+  @include flex-container(space-between, flex-start, nowrap)
+  border-bottom: 1px solid #c7c7c7
+  &__info
+    &>span
+      font-size: 14px
+      line-height: 22px
+  &__sum
+    @include flex-container(flex-start, flex-end, nowrap)
+    .sum
+      font-size: 20px
+      font-weight: bold
+      margin-right: 6px
+    &>p
+      font-size: 14px
+      padding-bottom: 1px
+      &>span
+        font-weight: bold
+  &__control
+    @include flex-container(flex-start, center, nowrap)
+    &>a
+      &:first-child
+        margin-right: 16px
+
+
+h2
+  margin: 24px 0 16px 0
+  font-size: 18px
+  font-weight: 600
+  line-height: 16px
+
+.settings
+  width: 668px
+  margin: 0 auto
+  &>div
+    padding: 16px 0
+    border-bottom: 1px solid #c7c7c7
+    @include flex-container(space-between, flex-start, nowrap)
+    &:last-child
+      border-bottom: none
+    .description
+      font-size: 14px
+      &>p
+        margin-bottom: 11px
+        font-weight: 600
+        line-height: 1
+      &>span
+        max-width: 427px
+        display: inline-block
+        line-height: 19px
+  &__control
+    @include flex-container(flex-start, center, nowrap)
+
+.wallet
+  width: 668px
+  margin: 0 auto
+  &__head
+    @include flex-container(space-between, center, nowrap)
+    padding-bottom: 8px
+    margin-top: 28px
+    font-size: 14px
+    border-bottom: 2px solid #c7c7c7
+    &>p
+      display: block
+  &__data
+    font-size: 14px
+    &>li
+      padding: 10px 0
+      @include flex-container(space-between, center, nowrap)
+      border-bottom: 1px solid #c7c7c7
+  &__type
+    width: 50px
+  &__amount
+    width: 110px
+    &>span
+      font-weight: 600
+  &__address
+    @include flex-container(flex-start, center, nowrap)
+    width: 99px
+    &>img
+      margin-left: 12px
+      cursor: pointer
+  &__status
+    width: 66px
+  &__date
+    width: 134px
+    @include flex-container(flex-end, center, nowrap)
+
+.mining
+  &__content
+    @include  flex-container(space-between, flex-start, nowrap)
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 1px
+      height: 263px
+      background-color: #c7c7c7
+    .mining__cpu, .mining__node
+      padding: 55px 0 70px 0
+      width: 50%
+      text-align: center
+      &>h4
+        font-size: 22px
+        margin-bottom: 14px
+      &>span
+        display: inline-block
+        margin-bottom: 45px
+        font-size: 14px
+        white-space: nowrap
+      .progress
+        display: inline-block
+        width: 212px
+        margin-top: 42px
+        &__head
+          @include  flex-container(space-between, flex-start, nowrap)
+          margin-bottom: 6px
+        &__bar
+          height: 6px
+          border-radius: 3px
+          background-color: #d8d8d8
+      .controlBtn
+        margin: 0 auto
+  &__data
+    @include  flex-container(space-between, flex-start, nowrap)
+    width: 669px
+    padding-top: 22px
+    margin: 0 auto
+    font-size: 14px
+    border-top: 1px solid #c7c7c7
+    &>li
+      &>span
+        display: inline-block
+        margin-bottom: 9px
+      &>p
+        &>span
+          font-weight: bold
+
+.performance
+  padding: 24px
+  background-color: #f7f7f7
+  &__block
+    background-color: $white
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.08)
+    padding: 25px 0
+    text-align: center 
+    border-radius: 4px
+  &__container
+    .performance__first, .performance__second
+      @include  flex-container(space-between, flex-start, nowrap)
+      margin-bottom: 24px
+      &>div
+        &>p
+          font-size: 22px
+          font-weight: 600
+          margin-bottom: 5px
+          line-height: 1.5
+        &>span
+          font-size: 14px
+          line-height: 1.4
+    .performance__first
+      &>div
+        width: 322px
+    .performance__second
+      &>div
+        width: 208px
+    .performance__last
+      &>div
+        padding: 30px 0 !important
+        &>p
+          font-size: 14px
+          display: inline-block
+          margin-bottom: 12px
+        &>div
+          width: 280px
+          height: 6px
+          margin: 0 auto
+          border-radius: 3px
+          background-color: #e7e7e7
+          @include  flex-container(flex-start, flex-start, nowrap)
+          &>span
+            width: 232px
+            height: 6px
+            border-radius: 3px
+            background-color: $red
+          
+
+
+
+
+
+

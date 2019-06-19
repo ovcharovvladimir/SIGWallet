@@ -1,0 +1,38 @@
+image: Visual Studio 2017
+
+configuration: Debug
+
+init:
+  - git config --global core.autocrlf input
+
+shallow_clone: true
+
+environment:
+  DEBUG: electron-builder
+
+cache:
+  - node_modules
+  - '%USERPROFILE%\.electron'
+
+install:
+  - ps: Install-Product node LTS x64
+  - npm i --global --production windows-build-tools
+  - npm i
+
+platform:
+  - x64
+
+build_script:
+  - npm run dist
+
+test: off
+
+for:
+-
+  branches:
+    only:
+      - master
+
+  configuration: Release
+  build_script:
+    - npm run release
